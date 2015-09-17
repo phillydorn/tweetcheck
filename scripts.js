@@ -4,6 +4,7 @@ var totalTweets = [];
 var earliest = '';
 
 function getTweets(id) {
+  $('.working').attr('style', 'display: block');
   if (id) {
     var url = '/tweets?id='+id;
   } else {
@@ -39,9 +40,12 @@ function getTweets(id) {
           getTweets(maxID);
         } else {
           JSONToCSVConvertor(totalTweets, 'smte2015', true);
+          $('.working').attr('style', 'display: none');
+
         }
       } else {
       JSONToCSVConvertor(totalTweets, 'smte2015', true);
+      $('.working').attr('style', 'display: none');
       }
     },
     error: function(error) {
