@@ -1,0 +1,11 @@
+button {
+  margin: 100px auto;
+  display: block;
+  background-color: #6585c5;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #8da9e2;
+}
